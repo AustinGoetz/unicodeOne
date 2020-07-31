@@ -14,9 +14,14 @@ class CharacterListTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    // MARK: - Actions
+    @IBAction func addCharacterButtonTapped(_ sender: Any) {
+        presentAlertController()
+    }
+    
 
     // MARK: - Table view data source
-
 //    override func numberOfSections(in tableView: UITableView) -> Int {
 //        return 0
 //    }
@@ -39,5 +44,32 @@ class CharacterListTableViewController: UITableViewController {
             let characterToDelete = CharacterController.shared.fetchedResultsController.object(at: indexPath)
             CharacterController.shared.delete(characterToDelete)
         }
+    }
+    
+    // MARK: - Helpers
+    func presentAlertController() {
+        // Create alert controller
+        let alertController = UIAlertController(title: "New Character", message: "Input from 1-8 hexadecimal digits. \n Emojis start at 1f600!", preferredStyle: .alert)
+        
+        // Add a text field - no config handler because we don't need to configure text field with anything special
+        alertController.addTextField(configurationHandler: nil)
+        
+        // Define the buttons
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let saveAction = UIAlertAction(title: "Save", style: .default) { (_) in
+            // Give the save button necessary actions to perform in completion handler
+            guard let textField = alertController.textFields?.first,
+                let codePoint = textField.text,
+                !codePoint.isEmpty else { return }
+            
+            CharacterController.shared.createCharacter(with: codePoint)
+        }
+        
+        // Add actions to alert controller
+        alertController.addAction(cancelAction)
+        alertController.addAction(saveAction)
+        
+        // Present final alert controller
+        present(alertController, animated: true)
     }
 }
