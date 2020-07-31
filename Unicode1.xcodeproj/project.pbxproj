@@ -16,6 +16,7 @@
 		2A9E771A24D472BA0035B2B7 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E771924D472BA0035B2B7 /* CoreDataStack.swift */; };
 		2A9E771C24D474160035B2B7 /* Character+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E771B24D474160035B2B7 /* Character+Convenience.swift */; };
 		2A9E771E24D477270035B2B7 /* CharacterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E771D24D477270035B2B7 /* CharacterController.swift */; };
+		2A9E772024D47FD20035B2B7 /* CharacterListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A9E771F24D47FD20035B2B7 /* CharacterListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		2A9E771924D472BA0035B2B7 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		2A9E771B24D474160035B2B7 /* Character+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+Convenience.swift"; sourceTree = "<group>"; };
 		2A9E771D24D477270035B2B7 /* CharacterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterController.swift; sourceTree = "<group>"; };
+		2A9E771F24D47FD20035B2B7 /* CharacterListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				2A9E771824D4725F0035B2B7 /* CustomCells */,
+				2A9E771F24D47FD20035B2B7 /* CharacterListTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				2A9E770624D4716C0035B2B7 /* Unicode1.xcdatamodeld in Sources */,
 				2A9E771E24D477270035B2B7 /* CharacterController.swift in Sources */,
 				2A9E76FC24D4716C0035B2B7 /* AppDelegate.swift in Sources */,
+				2A9E772024D47FD20035B2B7 /* CharacterListTableViewController.swift in Sources */,
 				2A9E76FE24D4716C0035B2B7 /* SceneDelegate.swift in Sources */,
 				2A9E771C24D474160035B2B7 /* Character+Convenience.swift in Sources */,
 				2A9E771A24D472BA0035B2B7 /* CoreDataStack.swift in Sources */,
